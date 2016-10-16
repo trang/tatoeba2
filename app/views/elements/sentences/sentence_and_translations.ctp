@@ -33,17 +33,28 @@ $notReliable = $sentence['correctness'] == -1;
 ?>
 <div sentence-and-translations class="sentence-and-translations" md-whiteframe="1">
     <div layout="column">
-        <md-subheader>
-            <?=
-            format(
-                __('Sentence {number} — belongs to {username}', true),
-                array(
-                    'number' => $sentenceLink,
-                    'username' => $userLink
-                )
-            );
-            ?>
-        </md-subheader>
+        <div layout="row" layout-aling="start center">
+            <md-subheader flex>
+                <?=
+                format(
+                    __('Sentence {number} — belongs to {username}', true),
+                    array(
+                        'number' => $sentenceLink,
+                        'username' => $userLink
+                    )
+                );
+                ?>
+            </md-subheader>
+            <? if (CurrentUser::isMember()) { ?>
+            <div>
+                <md-button class="md-icon-button"
+                           ng-click="vm.showLinkToVocabForm()">
+                    <md-icon>library_add</md-icon>
+                </md-button>
+            </div>
+            <? } ?>
+        </div>
+
         <div class="sentence <?= $notReliable ? 'not-reliable' : '' ?>"
              layout="row" layout-align="start center">
             <div class="lang">
@@ -72,8 +83,15 @@ $notReliable = $sentence['correctness'] == -1;
         </div>
     </div>
 
+    <?
+    if (CurrentUser::isMember()) {
+        echo $this->element('sentences/link_to_vocabulary_form');
+    }
+    ?>
+
     <? if (count($directTranslations) > 0) { ?>
-        <div layout="column" class="direct translations">
+        <div layout="column" class="direct translations"
+             ng-if="vm.areTranslationsDisplayed">
             <md-divider></md-divider>
             <md-subheader><? __('Translations') ?></md-subheader>
             <? foreach ($directTranslations as $translation) {
@@ -97,7 +115,8 @@ $notReliable = $sentence['correctness'] == -1;
             $showExtra = 'ng-if="vm.isExpanded"';
         }
         ?>
-        <div layout="column" <?= $showExtra ?> class="indirect translations">
+        <div layout="column" <?= $showExtra ?> class="indirect translations"
+             ng-if="vm.areTranslationsDisplayed">
             <md-subheader><? __('Translations of translations') ?></md-subheader>
             <? foreach ($indirectTranslations as $translation) {
                 $isExtra = $numExtra > 1 && $displayedTranslations >= $maxDisplayed;
@@ -115,7 +134,7 @@ $notReliable = $sentence['correctness'] == -1;
     <? } ?>
 
     <? if ($numExtra > 1) { ?>
-        <div layout="column">
+        <div layout="column" ng-if="vm.areTranslationsDisplayed">
             <md-button ng-click="vm.expandOrCollapse()">
                 <md-icon>{{vm.expandableIcon}}</md-icon>
                 <span ng-if="!vm.isExpanded">

@@ -38,8 +38,14 @@
 
         vm.isExpanded = false;
         vm.expandableIcon = 'expand_more';
+        vm.isLinkToVocabDisplayed = false;
+        vm.areTranslationsDisplayed = true;
 
         vm.expandOrCollapse = expandOrCollapse;
+
+        vm.showLinkToVocabForm = showLinkToVocabForm;
+        vm.hideLinkToVocabForm = hideLinkToVocabForm;
+        vm.linkCurrent = linkCurrent;
 
         /////////////////////////////////////////////////////////////////////////
 
@@ -51,6 +57,20 @@
             } else {
                 vm.expandableIcon = 'expand_more';
             }
+        }
+
+        function showLinkToVocabForm() {
+            vm.isLinkToVocabDisplayed = true;
+            vm.areTranslationsDisplayed = false;
+        }
+
+        function hideLinkToVocabForm() {
+            vm.isLinkToVocabDisplayed = false;
+            vm.areTranslationsDisplayed = true;
+        }
+
+        function linkCurrent() {
+            alert('Do your POST here.');
         }
     }
 
