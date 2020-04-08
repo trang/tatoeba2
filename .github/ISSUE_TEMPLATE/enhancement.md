@@ -1,7 +1,8 @@
 ---
 name: Enhancement
-about: To request a new feature or an improvement for an existing feature
-title: ''
+about: You are not satisfied with the features that Tatoeba offers and would like
+  something new or something better.
+title: 'Tip: a good title is a title that answers the question "What is the problem?"'
 labels: enhancement
 assignees: ''
 
@@ -9,15 +10,15 @@ assignees: ''
 
 ## Problem description
 
-Please describe the problem you are facing.
+Describe the problem you are facing with the current way Tatoeba works. Provide enough information so that we can put ourselves in your shoes and understand why you need something to be changed.
 
 ## Suggested solution
 
 (Optional)
 
-If you have an idea how to fix your problem, you can suggest it here.
+If you have a specific idea of what we could change, you can suggest it here.
 
-## Other useful information
+## Additional information
 
 (Optional)
 
