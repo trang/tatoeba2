@@ -1,25 +1,19 @@
 ---
-name: Enhancement
-about: You are not satisfied with the features that Tatoeba offers and would like
-  something new or something better.
-title: 'Tip: a good title is a title that answers the question "What is the problem?"'
+name: Feature request
+about: You have an idea on how Tatoeba could be improved
+title: ''
 labels: enhancement
 assignees: ''
 
 ---
 
-## Problem description
+*Please tell us a story.* How did you came up with that idea? What made you think about it?
 
-Describe the problem you are facing with the current way Tatoeba works. Provide enough information so that we can put ourselves in your shoes and understand why you need something to be changed.
+*Example:*
+> On the Wall, I often find some discussions very interesting, but I don't feel like commenting because I have nothing to say. One recent example is [this one](https://tatoeba.org/eng/sentences/show/8619497).
+> But I happen upon something really interesting like this quite often. Sometimes I stumble upon an interesting question that is not answered yet, and I want to wait for the answer too. I just don't want to miss it, and I believe I mostly miss them.
+> For questions, especially if the question has been there for years, I sometimes add something like "I've got this question too" - it's not really constructive, but this way it gets a higher chance of being noticed, and it also "subscribes" me to that thread.
+> But I often don't have anything to contribute, but still interested in the discussion and don't want to miss anything, taking into account some discussions are happening at the speed of one post per month or something.
 
-## Suggested solution
-
-(Optional)
-
-If you have a specific idea of what we could change, you can suggest it here.
-
-## Additional information
-
-(Optional)
-
-If there is anything else we need to know about the issue, please mention it here.
+Finally, please *focus on the problem* that your feature request is solving. What’s wrong with how things are now? Wrap it up into one sentence and use it as title for the issue.
+*Example:* Can't subscribe to a discussion without posting an unnecessary comment
