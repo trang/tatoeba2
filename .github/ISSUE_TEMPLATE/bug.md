@@ -1,22 +1,36 @@
 ---
-name: Bug
-about: You have noticed that a feature does not work as expected.
+name: Bug report
+about: Something's not working correctly
 title: ''
 labels: bug
 assignees: ''
 
 ---
 
-## Steps to reproduce
+**Describe the bug**
+A clear and concise description of what the bug is.
+*Example: I cannot add a tag when clicking on its name.*
 
-Describe step by step how to reproduce the bug. Provide sufficient information so that anyone can follow the steps and experience the same bug as you.
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+*Example: *
+*1. Go to a sentence page.*
+*2. Type 'ani' in the tag field.*
+*3. Click on the suggestion 'animal'.*
+*4. The tag is not added*
 
-## Expected behavior
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+*Example: The tag should be added to the sentence when I click on it.*
 
-Describe what you expected to happen (or to see).
+**Screenshots (if applicable)**
+If applicable, add screenshots to help explain your problem.
 
-## Additional info
-
-(Optional)
-
-Feel free to mention any other information that you think may be useful for us to figure out how to test and fix the bug (such as your OS version, your browser version, a screenshot).
+**Additional information (if relevant)**
+- O.S., if possible with version *(Windows 10, iOS8.1, Linux distribution, etc.)*
+- Browser, if possible with version *(Firefox 76.0.1, Safari 13.1, etc.)*
+- Any other information related to your problem.
